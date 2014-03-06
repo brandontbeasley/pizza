@@ -28,6 +28,14 @@ describe Pizza do
     expect(pizza_2.vegetarian).to eq(true)
   end
 
+  it "adds a topping to the @topping array in the Pizza class" do
+    pizza = Pizza.new
+    sausage = Topping.new("sausage")
+    pizza.add_topping(sausage)
+    expect(pizza.toppings.size).to eq(2)
+    expect(pizza.toppings.last.name).to eq('sausage')
+  end
+
 end
 
 describe Topping do

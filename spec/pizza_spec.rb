@@ -17,6 +17,17 @@ describe Pizza do
   expect(pizza.toppings.first.name).to eq('cheese')
   end
 
+  it "checks if pizza is vegetarian" do
+    toppings = [Topping.new('mushrooms', vegetarian: true),
+                  Topping.new('peperroni')]
+    pizza = Pizza.new(toppings)
+
+    expect(pizza.vegetarian?).to eq(false)
+
+    pizza_2 = Pizza.new
+    expect(pizza_2.vegetarian?).to eq(true)
+  end
+
 end
 
 describe Topping do

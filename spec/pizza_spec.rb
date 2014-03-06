@@ -22,10 +22,10 @@ describe Pizza do
                   Topping.new('peperroni')]
     pizza = Pizza.new(toppings)
 
-    expect(pizza.vegetarian?).to eq(false)
+    expect(pizza.vegetarian).to eq(false)
 
     pizza_2 = Pizza.new
-    expect(pizza_2.vegetarian?).to eq(true)
+    expect(pizza_2.vegetarian).to eq(true)
   end
 
 end
